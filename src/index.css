@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-[#020010] cursor-default;
+  }
+  
+  /* Hide cursor on desktop to use custom cursor, but keep it on touch devices */
+  @media (pointer: fine) {
+    body {
+      cursor: none;
+    }
+    a, button {
+      cursor: none;
+    }
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-y-10 {
+  transform: rotateY(10deg);
+}
+
+.rotate-y--10 {
+  transform: rotateY(-10deg);
+}
+
+.text-fill-transparent {
+  -webkit-text-fill-color: transparent;
+}
